@@ -1,0 +1,13 @@
+
+services:
+  - type: worker
+    name: telegram-notifier
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7933488514:AAHR85P7j_wJczRK39lETMmiham0VCS1Dc0
+      - key: CHAT_ID
+        value: YOUR_CHAT_ID_HERE
